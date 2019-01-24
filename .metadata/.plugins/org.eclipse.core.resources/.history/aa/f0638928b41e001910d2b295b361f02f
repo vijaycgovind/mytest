@@ -1,0 +1,35 @@
+package mytest;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class selTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		   WebDriver driver = null; 
+			
+//		   @Given("^I have open the browser$") 
+		   
+		   		      driver = new FirefoxDriver();
+			   
+			//    System.setProperty("webdriver.gecko.driver", "/Users/vijaygovind/Downloads/Firefox 64.0.2.dmg");
+
+			  // WebDriver driver=new FirefoxDriver();
+			   
+			   driver.get("http://seleniumhq.com");
+		   
+			   System.out.println("hello opened browser");
+		      driver.navigate().to("https://www.facebook.com/"); 
+			
+		      if(driver.findElement(By.id("u_0_v")).isEnabled()) { 
+		         System.out.println("Test 1 Pass"); 
+		      } else { 
+		         System.out.println("Test 1 Fail"); 
+		      } 
+		      driver.close(); 
+	}
+
+}
